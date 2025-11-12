@@ -241,6 +241,14 @@
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Kravennagen/body_exercises" class="btn small" target="_blank">View Code</a>
+                        <button class="btn small secondary" onclick="toggleVideo('body-exercises-video')">Watch Demo</button>
+                    </div>
+                    <div class="project-video" id="body-exercises-video" style="display: none;">
+                        <video controls width="100%" preload="metadata">
+                            <source src="videos/body_exercises.mov" type="video/quicktime">
+                            <source src="videos/body_exercises.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
                 <div class="project-card">
@@ -269,6 +277,14 @@
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Kravennagen/leboncoin_scraper" class="btn small" target="_blank">View Code</a>
+                        <button class="btn small secondary" onclick="toggleVideo('leboncoin-scraper-video')">Watch Demo</button>
+                    </div>
+                    <div class="project-video" id="leboncoin-scraper-video" style="display: none;">
+                        <video controls width="100%" preload="metadata">
+                            <source src="videos/leboncoin_scraper.mov" type="video/quicktime">
+                            <source src="videos/leboncoin_scraper.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -307,5 +323,15 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function toggleVideo(videoId) {
+            const video = document.getElementById(videoId);
+            if (video.style.display === 'none') {
+                video.style.display = 'block';
+            } else {
+                video.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
