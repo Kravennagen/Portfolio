@@ -266,6 +266,20 @@
                     </div>
                 </div>
                 <div class="project-card">
+                    <h3>Simple Agent with RAG</h3>
+                    <p>AI agent implementation using Retrieval-Augmented Generation (RAG) for intelligent document processing and question answering with context-aware responses.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>RAG</span>
+                        <span>AI/ML</span>
+                        <span>NLP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kravennagen/simple_agent" class="btn small" target="_blank">View Code</a>
+                        <button class="btn small secondary" onclick="openModal('images/simple_agent.png')">View Screenshot</button>
+                    </div>
+                </div>
+                <div class="project-card">
                     <h3>Leboncoin Real Estate Scraper</h3>
                     <p>Python web scraper for leboncoin.fr real estate listings with smart filtering, automatic data export to CSV/Excel, and rate limiting protection.</p>
                     <div class="project-tech">
@@ -314,6 +328,10 @@
         </div>
     </section>
 
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Morgane Flamant. All rights reserved.</p>
@@ -329,6 +347,15 @@
             } else {
                 video.style.display = 'none';
             }
+        }
+
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('imageModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
         }
     </script>
 </body>
