@@ -81,8 +81,30 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Mobile menu toggle (if needed later)
+// Mobile menu toggle
 function toggleMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    
     navMenu.classList.toggle('active');
+    toggle.classList.toggle('active');
 }
+
+function closeMobileMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    
+    navMenu.classList.remove('active');
+    toggle.classList.remove('active');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    const navMenu = document.querySelector('.nav-menu');
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const navbar = document.querySelector('.navbar');
+    
+    if (!navbar.contains(e.target) && navMenu.classList.contains('active')) {
+        closeMobileMenu();
+    }
+});
