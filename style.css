@@ -47,6 +47,31 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
+}
+
+.language-selector {
+    margin-left: 1rem;
+}
+
+.language-selector select {
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.language-selector select:hover {
+    border-color: #3498db;
+}
+
+.language-selector select:focus {
+    outline: none;
+    border-color: #3498db;
 }
 
 .nav-menu a {
@@ -115,6 +140,16 @@ body {
     .nav-menu a {
         font-size: 1.2rem;
         padding: 1rem;
+    }
+    
+    .language-selector {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    
+    .language-selector select {
+        font-size: 1.1rem;
+        padding: 8px 15px;
     }
 }
 

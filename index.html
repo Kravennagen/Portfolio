@@ -17,12 +17,18 @@
                 <span></span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
-                <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
-                <li><a href="#experience" onclick="closeMobileMenu()">Experience</a></li>
-                <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
-                <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+                <li><a href="#home" onclick="closeMobileMenu()" data-translate="nav.home">Home</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()" data-translate="nav.about">About</a></li>
+                <li><a href="#experience" onclick="closeMobileMenu()" data-translate="nav.experience">Experience</a></li>
+                <li><a href="#skills" onclick="closeMobileMenu()" data-translate="nav.skills">Skills</a></li>
+                <li><a href="#projects" onclick="closeMobileMenu()" data-translate="nav.projects">Projects</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()" data-translate="nav.contact">Contact</a></li>
+                <li class="language-selector">
+                    <select id="languageSelect" onchange="changeLanguage(this.value)">
+                        <option value="en">🇺🇸 EN</option>
+                        <option value="fr">🇫🇷 FR</option>
+                    </select>
+                </li>
             </ul>
         </div>
     </nav>
@@ -33,39 +39,39 @@
                 <img src="images/20250705_114150.jpg" alt="Morgane Flamant">
             </div>
             <h1>Morgane Flamant</h1>
-            <h2>Freelance Python Developer (Portage Salarial)</h2>
-            <p>Building robust, scalable solutions with clean, efficient code</p>
+            <h2 data-translate="hero.subtitle">Freelance Python Developer (Portage Salarial)</h2>
+            <p data-translate="hero.description">Building robust, scalable solutions with clean, efficient code</p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn primary">View Projects</a>
-                <a href="files/morgane_flamant_resume.pdf" class="btn secondary" target="_blank">Download Resume</a>
+                <a href="#projects" class="btn primary" data-translate="hero.viewProjects">View Projects</a>
+                <a href="files/morgane_flamant_resume.pdf" class="btn secondary" target="_blank" data-translate="hero.downloadResume">Download Resume</a>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 data-translate="about.title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a passionate freelance Python developer with over 5 years of experience building web applications, APIs, and automation solutions. I focus on writing clean, maintainable code and delivering high-quality solutions that meet client needs.</p>
-                    <p>My approach combines technical excellence with clear communication, ensuring projects are delivered on time and exceed expectations.</p>
-                    <p>Working through <a href="https://o-portage-salarial.fr/" target="_blank" style="color: #3498db; text-decoration: none;">O'Portage</a> for seamless project management and administrative support.</p>
+                    <p data-translate="about.description1">I'm a passionate freelance Python developer with over 5 years of experience building web applications, APIs, and automation solutions. I focus on writing clean, maintainable code and delivering high-quality solutions that meet client needs.</p>
+                    <p data-translate="about.description2">My approach combines technical excellence with clear communication, ensuring projects are delivered on time and exceed expectations.</p>
+                    <p data-translate="about.oPortage">Working through <a href="https://o-portage-salarial.fr/" target="_blank" style="color: #3498db; text-decoration: none;">O'Portage</a> for seamless project management and administrative support.</p>
                     <div class="languages">
-                        <h3>Languages</h3>
+                        <h3 data-translate="about.languages">Languages</h3>
                         <div class="language-list">
-                            <span class="language">French (Native)</span>
-                            <span class="language">English (Fluent)</span>
+                            <span class="language" data-translate="about.frenchNative">French (Native)</span>
+                            <span class="language" data-translate="about.englishFluent">English (Fluent)</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-stats">
                     <div class="stat">
                         <h3>5+</h3>
-                        <p>Years Experience</p>
+                        <p data-translate="about.yearsExperience">Years Experience</p>
                     </div>
                     <div class="stat">
                         <h3>38M+</h3>
-                        <p>Records Managed</p>
+                        <p data-translate="about.recordsManaged">Records Managed</p>
                     </div>
                     <div class="stat">
                         <h3>500€</h3>
@@ -78,22 +84,22 @@
 
     <section id="experience" class="experience">
         <div class="container">
-            <h2>Work Experience</h2>
+            <h2 data-translate="experience.title">Work Experience</h2>
             <div class="experience-timeline">
                 <div class="experience-item">
                     <div class="experience-date">2021 - 2025</div>
                     <div class="experience-content">
-                        <h3>Lead Developer Python</h3>
+                        <h3 data-translate="exp1.title">Lead Developer Python</h3>
                         <h4>NM Data - MV Group</h4>
-                        <p class="company-description">Direct Marketing / Data Management company specializing in B2C and B2B data collection, cleaning, and standardization. Managing a central database of over 38 million individuals for marketing campaigns.</p>
+                        <p class="company-description" data-translate="exp1.description">Direct Marketing / Data Management company specializing in B2C and B2B data collection, cleaning, and standardization. Managing a central database of over 38 million individuals for marketing campaigns.</p>
                         <div class="key-contributions">
-                            <h5>Key Contributions:</h5>
+                            <h5 data-translate="exp.keyContributions">Key Contributions:</h5>
                             <ul>
-                                <li>Introduced Agile SCRUM methodology with sprint planning and retrospectives using Asana</li>
-                                <li>Authored internal development charters for ticketing workflows, coding standards, and Git usage</li>
-                                <li>Led projects using Python automation scripts, Django web interfaces, and MongoDB for large-scale data</li>
-                                <li>Managed technical planning and refactoring of legacy code for improved performance</li>
-                                <li>Managed growing development team and handled production deployment</li>
+                                <li data-translate="exp1.contrib1">Introduced Agile SCRUM methodology with sprint planning and retrospectives using Asana</li>
+                                <li data-translate="exp1.contrib2">Authored internal development charters for ticketing workflows, coding standards, and Git usage</li>
+                                <li data-translate="exp1.contrib3">Led projects using Python automation scripts, Django web interfaces, and MongoDB for large-scale data</li>
+                                <li data-translate="exp1.contrib4">Managed technical planning and refactoring of legacy code for improved performance</li>
+                                <li data-translate="exp1.contrib5">Managed growing development team and handled production deployment</li>
                             </ul>
                         </div>
                     </div>
@@ -101,17 +107,17 @@
                 <div class="experience-item">
                     <div class="experience-date">2019 - 2021</div>
                     <div class="experience-content">
-                        <h3>Backend Developer Python</h3>
+                        <h3 data-translate="exp2.title">Backend Developer Python</h3>
                         <h4>Surycat - Enovacom</h4>
-                        <p class="company-description">Healthcare / Crisis Management solution for hospital environments managing staff rotations efficiently during crisis situations. Available as on-premises and cloud-based solutions to prevent staff burnout through fair workload distribution.</p>
+                        <p class="company-description" data-translate="exp2.description">Healthcare / Crisis Management solution for hospital environments managing staff rotations efficiently during crisis situations. Available as on-premises and cloud-based solutions to prevent staff burnout through fair workload distribution.</p>
                         <div class="key-contributions">
-                            <h5>Key Contributions:</h5>
+                            <h5 data-translate="exp.keyContributions">Key Contributions:</h5>
                             <ul>
-                                <li>Developed and maintained backend API endpoints for frontend applications</li>
-                                <li>Built scalable, event-driven services using AWS Lambda and Serverless framework</li>
-                                <li>Implemented security best practices with AWS Secrets Manager and IAM permissions</li>
-                                <li>Wrote functional and unit tests with Pytest for code reliability</li>
-                                <li>Participated in CI/CD processes using CircleCI and managed production deployments</li>
+                                <li data-translate="exp2.contrib1">Developed and maintained backend API endpoints for frontend applications</li>
+                                <li data-translate="exp2.contrib2">Built scalable, event-driven services using AWS Lambda and Serverless framework</li>
+                                <li data-translate="exp2.contrib3">Implemented security best practices with AWS Secrets Manager and IAM permissions</li>
+                                <li data-translate="exp2.contrib4">Wrote functional and unit tests with Pytest for code reliability</li>
+                                <li data-translate="exp2.contrib5">Participated in CI/CD processes using CircleCI and managed production deployments</li>
                             </ul>
                         </div>
                     </div>
@@ -119,16 +125,16 @@
                 <div class="experience-item">
                     <div class="experience-date">Aug - Sep 2023</div>
                     <div class="experience-content">
-                        <h3>Trainer – MongoDB & Elasticsearch</h3>
+                        <h3 data-translate="exp3.title">Trainer – MongoDB & Elasticsearch</h3>
                         <h4>301 School, Rennes</h4>
-                        <p class="company-description">Education / Career Retraining center focused on helping individuals transition into new careers, particularly in tech and data-related fields.</p>
+                        <p class="company-description" data-translate="exp3.description">Education / Career Retraining center focused on helping individuals transition into new careers, particularly in tech and data-related fields.</p>
                         <div class="key-contributions">
-                            <h5>Key Contributions:</h5>
+                            <h5 data-translate="exp.keyContributions">Key Contributions:</h5>
                             <ul>
-                                <li>Delivered two 3-day training sessions on MongoDB and Elasticsearch (including Kibana)</li>
-                                <li>Created engaging training materials using Google Slides for non-technical adult learners</li>
-                                <li>Designed hands-on exercises and quizzes to reinforce database concepts</li>
-                                <li>Guided participants through installation, configuration, and real-world usage</li>
+                                <li data-translate="exp3.contrib1">Delivered two 3-day training sessions on MongoDB and Elasticsearch (including Kibana)</li>
+                                <li data-translate="exp3.contrib2">Created engaging training materials using Google Slides for non-technical adult learners</li>
+                                <li data-translate="exp3.contrib3">Designed hands-on exercises and quizzes to reinforce database concepts</li>
+                                <li data-translate="exp3.contrib4">Guided participants through installation, configuration, and real-world usage</li>
                             </ul>
                         </div>
                     </div>
@@ -136,17 +142,17 @@
                 <div class="experience-item">
                     <div class="experience-date">2019 - 2021</div>
                     <div class="experience-content">
-                        <h3>Project Coach & Evaluator</h3>
+                        <h3 data-translate="exp4.title">Project Coach & Evaluator</h3>
                         <h4>ETNA (École des Technologies Numériques Avancées)</h4>
-                        <p class="company-description">Education / Project-Based Learning tech school where students learn through hands-on experience with industry professionals providing coaching and assessment on real-world projects.</p>
+                        <p class="company-description" data-translate="exp4.description">Education / Project-Based Learning tech school where students learn through hands-on experience with industry professionals providing coaching and assessment on real-world projects.</p>
                         <div class="key-contributions">
-                            <h5>Key Contributions:</h5>
+                            <h5 data-translate="exp.keyContributions">Key Contributions:</h5>
                             <ul>
-                                <li>Coached student teams on Grand Projet ETNA (GPE), a two-year capstone startup project</li>
-                                <li>Advised on project direction, innovation, and feasibility to shape viable products</li>
-                                <li>Guided teams from Proof of Concept development to polished final products</li>
-                                <li>Assessed and graded projects based on innovation, execution, and presentation</li>
-                                <li>Participated in corrections across multiple subjects and student cohorts</li>
+                                <li data-translate="exp4.contrib1">Coached student teams on Grand Projet ETNA (GPE), a two-year capstone startup project</li>
+                                <li data-translate="exp4.contrib2">Advised on project direction, innovation, and feasibility to shape viable products</li>
+                                <li data-translate="exp4.contrib3">Guided teams from Proof of Concept development to polished final products</li>
+                                <li data-translate="exp4.contrib4">Assessed and graded projects based on innovation, execution, and presentation</li>
+                                <li data-translate="exp4.contrib5">Participated in corrections across multiple subjects and student cohorts</li>
                             </ul>
                         </div>
                     </div>
@@ -157,7 +163,7 @@
 
     <section id="skills" class="skills">
         <div class="container">
-            <h2>Technical Skills</h2>
+            <h2 data-translate="skills.title">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3><i class="fab fa-python"></i> Python & Frameworks</h3>
@@ -220,11 +226,11 @@
 
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Featured Projects</h2>
+            <h2 data-translate="projects.title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>AFACE78 Website</h3>
-                    <p>Volunteer project creating a complete website for AFACE78 association. Developed custom WordPress plugins integrating Ohme and Brevo services for enhanced functionality.</p>
+                    <h3 data-translate="proj1.title">AFACE78 Website</h3>
+                    <p data-translate="proj1.description">Volunteer project creating a complete website for AFACE78 association. Developed custom WordPress plugins integrating Ohme and Brevo services for enhanced functionality.</p>
                     <div class="project-tech">
                         <span>WordPress</span>
                         <span>PHP</span>
@@ -232,12 +238,12 @@
                         <span>Brevo API</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://aface78.fr/" class="btn small secondary" target="_blank">Live Site</a>
+                        <a href="https://aface78.fr/" class="btn small secondary" target="_blank" data-translate="proj.liveSite">Live Site</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3>Body Exercises Workout Planner</h3>
-                    <p>PyQt6 desktop application for creating personalized workout plans with interactive body diagrams. Features gender-specific exercises, calendar export, and visual workout planning.</p>
+                    <h3 data-translate="proj2.title">Body Exercises Workout Planner</h3>
+                    <p data-translate="proj2.description">PyQt6 desktop application for creating personalized workout plans with interactive body diagrams. Features gender-specific exercises, calendar export, and visual workout planning.</p>
                     <div class="project-tech">
                         <span>Python</span>
                         <span>PyQt6</span>
@@ -245,8 +251,8 @@
                         <span>Desktop App</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kravennagen/body_exercises" class="btn small" target="_blank">View Code</a>
-                        <button class="btn small secondary" onclick="toggleVideo('body-exercises-video')">Watch Demo</button>
+                        <a href="https://github.com/Kravennagen/body_exercises" class="btn small" target="_blank" data-translate="proj.viewCode">View Code</a>
+                        <button class="btn small secondary" onclick="toggleVideo('body-exercises-video')" data-translate="proj.watchDemo">Watch Demo</button>
                     </div>
                     <div class="project-video" id="body-exercises-video" style="display: none;">
                         <video controls width="100%" preload="metadata">
@@ -256,8 +262,8 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3>IoT Device Management System</h3>
-                    <p>Comprehensive FastAPI platform for IoT device management with real-time monitoring, MQTT integration, WebSocket support, and automated alert systems.</p>
+                    <h3 data-translate="proj3.title">IoT Device Management System</h3>
+                    <p data-translate="proj3.description">Comprehensive FastAPI platform for IoT device management with real-time monitoring, MQTT integration, WebSocket support, and automated alert systems.</p>
                     <div class="project-tech">
                         <span>FastAPI</span>
                         <span>PostgreSQL</span>
@@ -267,12 +273,12 @@
                         <span>Docker</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kravennagen/IoT-Device-Management-System---FastAPI" class="btn small" target="_blank">View Code</a>
+                        <a href="https://github.com/Kravennagen/IoT-Device-Management-System---FastAPI" class="btn small" target="_blank" data-translate="proj.viewCode">View Code</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3>Simple Agent with RAG</h3>
-                    <p>AI agent implementation using Retrieval-Augmented Generation (RAG) for intelligent document processing and question answering with context-aware responses.</p>
+                    <h3 data-translate="proj4.title">Simple Agent with RAG</h3>
+                    <p data-translate="proj4.description">AI agent implementation using Retrieval-Augmented Generation (RAG) for intelligent document processing and question answering with context-aware responses.</p>
                     <div class="project-tech">
                         <span>Python</span>
                         <span>RAG</span>
@@ -280,13 +286,13 @@
                         <span>NLP</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kravennagen/simple_agent" class="btn small" target="_blank">View Code</a>
-                        <button class="btn small secondary" onclick="openModal('images/simple_agent.png')">View Screenshot</button>
+                        <a href="https://github.com/Kravennagen/simple_agent" class="btn small" target="_blank" data-translate="proj.viewCode">View Code</a>
+                        <button class="btn small secondary" onclick="openModal('images/simple_agent.png')" data-translate="proj.viewScreenshot">View Screenshot</button>
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3>Leboncoin Real Estate Scraper</h3>
-                    <p>Python web scraper for leboncoin.fr real estate listings with smart filtering, automatic data export to CSV/Excel, and rate limiting protection.</p>
+                    <h3 data-translate="proj5.title">Leboncoin Real Estate Scraper</h3>
+                    <p data-translate="proj5.description">Python web scraper for leboncoin.fr real estate listings with smart filtering, automatic data export to CSV/Excel, and rate limiting protection.</p>
                     <div class="project-tech">
                         <span>Python</span>
                         <span>BeautifulSoup</span>
@@ -294,8 +300,8 @@
                         <span>Web Scraping</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kravennagen/leboncoin_scraper" class="btn small" target="_blank">View Code</a>
-                        <button class="btn small secondary" onclick="toggleVideo('leboncoin-scraper-video')">Watch Demo</button>
+                        <a href="https://github.com/Kravennagen/leboncoin_scraper" class="btn small" target="_blank" data-translate="proj.viewCode">View Code</a>
+                        <button class="btn small secondary" onclick="toggleVideo('leboncoin-scraper-video')" data-translate="proj.watchDemo">Watch Demo</button>
                     </div>
                     <div class="project-video" id="leboncoin-scraper-video" style="display: none;">
                         <video controls width="100%" preload="metadata">
@@ -310,8 +316,8 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Let's Work Together</h2>
-            <p>Ready to bring your Python project to life? Let's discuss your requirements.</p>
+            <h2 data-translate="contact.title">Let's Work Together</h2>
+            <p data-translate="contact.description">Ready to bring your Python project to life? Let's discuss your requirements.</p>
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
